@@ -1,0 +1,20 @@
+{
+  "redis": {
+    "address": "redis://smart-telemed.mfcuqk.0001.use2.cache.amazonaws.com:6379"
+  },
+  "redis_local": {
+    "address": "redis://127.0.0.1:6379"
+  },
+  "pg": {
+    "host": "stm-backend.cdfm3sjhth8t.eu-central-1.rds.amazonaws.com",
+    "user": "pgmaster",
+    "password": "seqAp5aBruya",
+    "database": "smart-telemed"
+  },
+  "pg_local": {
+    "host": "localhost",
+    "user": "postgres",
+    "password": "ye7884j9",
+    "database": "smart-telemed"
+  }
+}

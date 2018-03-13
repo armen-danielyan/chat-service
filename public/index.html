@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Chat</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="modal fade" id="video-offer" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 style="color:black;" id="whois">User Is Calling You</h4>
+            </div>
+            <div class="modal-body" id="mdl-body">
+                <button class="btn btn-success" id="answer-button">Answer</button>
+                <button class="btn btn-danger" id="ignore-button">Ignore</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid video-container vertical-center" style="display: none">
+    <span id="hang-up" class=""></span>
+    <video class="local pull-left" autoplay muted playsinline="true"></video>
+    <video class="remote" autoplay playsinline="true"></video>
+</div>
+
+<div class="container-fluid login_page" style="display: block">
+    <div class="container-fluid container-table">
+        <div class="room_container">
+            <div>
+                <input class="room_info" type="text" id="username" placeholder="Your Name">
+            </div>
+            <div>
+                <input class="room_info" type="text" id="room_name"  placeholder="Name of the Room">
+            </div>
+            <div class="error alert alert-danger" style="display: none">
+                <strong>Error!</strong>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content container-fluid bootstrap snippets chat_page" style="display: none">
+    <button type="button" id="but" class="but btn btn-default pull-right">Leave Room</button>
+    <div class="row row-broken">
+        <div class="col-sm-3 col-xs-12 chat-wrapper main-wrapper">
+            <div class="col-inside-lg chat chat-wrapper" style="overflow: hidden; outline: none;" tabindex="5000">
+                <div class="chat-users"></div>
+            </div>
+        </div>
+        <div class="col-sm-9 col-xs-12 chat" style="outline: none;" tabindex="5001">
+            <div class="col-inside-lg decor-default messages" >
+                <ul class="chat-body">
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-9 col-xs-12">
+            <div class="row">
+                <div id="typing" class="col-xs-6"></div>
+                <div id="msg-status" class="col-xs-6"></div>
+            </div>
+        </div>
+
+        <div class="answer-add">
+            <input id="my-msg" placeholder="Write a message" class="input-message">
+            <span class="answer-btn answer-btn-2"></span>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/socket.io.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/main.js" ></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

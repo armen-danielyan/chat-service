@@ -1,0 +1,337 @@
+@-webkit-keyframes phoneAnimation {
+    from {bottom: -5px}
+    to {bottom: -20px}
+}
+
+
+html, body, .container-table, .login_page{
+    height: 100%;
+    font-style: normal;
+}
+
+.header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+    margin: auto;
+    font-family: 'Pacifico', serif;
+}
+
+.login_page {
+    text-align: center;
+    background-color: #708272;
+}
+
+.container-table {
+    display: table;
+}
+.room_container {
+    width : 50%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.room_info {
+    padding: 10px;
+    border: none;
+    font-size: 24px;
+    outline: none;
+    margin: 10px;
+}
+#answer-button{
+    margin-left: 100px;
+    width: 130px;
+    height: 60px;
+    font-size: 24px;
+}
+#ignore-button{
+    width: 130px;
+    height: 60px;
+    font-size: 24px;
+    margin-left: 100px;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.video-container{
+    text-align: center;
+    width: 100%;
+    height: 90%;
+}
+.local {
+    margin: 30px;
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    background-color: #000000;
+    border: 1px solid #ff0000;
+}
+.remote {
+    width: 80%;
+    height: 90%;
+    background-color: #000000;
+    border: 1px solid #ff0000;
+}
+
+#hang-up {
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/phone.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    bottom: -10px;
+    right: 47%;
+}
+
+#hang-up:hover {
+    cursor: pointer;
+}
+.content {
+    height: 98%;
+}
+.row.row-broken {
+    padding-bottom: 0;
+    height: 90%;
+    width: 70%;
+    background-color: #FFFFFF;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #dddddd;
+}
+.col-inside-lg {
+    padding: 20px;
+    border-width: 0px;
+}
+.chat {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 85%;
+}
+.main-wrapper {
+    border-right: 1px solid #dddddd;
+}
+.chat-wrapper {
+    height: 100%;
+    background-color: #D3D3D3;
+
+}
+.decor-default {
+    background-color: #ffffff;
+}
+.chat-users{
+    height: 100%;
+}
+.chat-users h6 {
+    font-size: 3vw;
+    font-family: 'Pacifico', serif;
+}
+.chat-users .user {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.chat-users .user .name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*****************CHAT BODY *******************/
+.chat-body .log {
+    background: #ffffff;
+    color: #000000;
+    clear: both;
+    border-radius: 8px 8px 8px 0;
+    font-size: 18px;
+    list-style: none;
+    text-align: -webkit-center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chat-body{
+    height: 80%;
+}
+
+.chat-body .answer.left {
+    padding: 0 0 0 10px;
+    text-align: left;
+    float: left;
+    margin-bottom: 5px;
+}
+.chat-body .answer {
+    position: relative;
+    max-width: 200px;
+    overflow: hidden;
+    word-wrap: break-word;
+    clear: both;
+
+}
+
+.chat-body .answer .name {
+    font-size: 11px;
+    line-height: 19px;
+}
+
+.chat-body .answer.left .text {
+    padding: 10px 20px;
+    background: #dddddd;
+    color: #333333;
+    border-radius: 12px 12px 12px 0;
+}
+.chat-body .answer .text {
+    padding: 3px 3px 3px 3px;
+    font-size: 15px;
+    line-height: 22px;
+    position: relative;
+}
+.chat-body .answer.left .text:before {
+    left: -30px;
+    border-right-color: #dddddd;
+    border-right-width: 13px;
+}
+.chat-body .answer .text:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border: 18px solid transparent;
+    border-bottom-width: 0;
+}
+
+/*RIGHT*/
+.chat-body .answer.right {
+    position: relative;
+    padding: 0 20px 0 0;
+    text-align: right;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.chat-body .answer.right .text {
+    padding: 10px 20px;
+    background-color: #9e7e7e;
+    color: #ffffff;
+    border-radius: 12px 12px 0 12px;
+}
+.chat-body .answer.right .text:before {
+    right: -30px;
+    border-left-color: #9e7e7e;
+    border-left-width: 13px;
+}
+
+
+/**************ADD FORM ***************/
+.answer-add {
+    position: relative;
+    width: 70%;
+    float: right;
+    margin-top: 8px;
+    padding: 26px;
+    background: #666666;
+    bottom: 0;
+    right: 4px;
+}
+.answer-add input {
+    border: none;
+    background: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0;
+    color: #ffffff;
+    outline: none;
+}
+
+.answer-add .answer-btn {
+    display: block;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+}
+.answer-add .answer-btn-2 {
+    right: 20px;
+}
+.answer-add input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.answer-add input:-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+}
+
+.answer-add input::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff;
+}
+
+.answer-add input:-ms-input-placeholder {
+    color: #fff;
+}
+.answer-add input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.room_info::-webkit-input-placeholder {
+    color: #000;
+}
+
+.room_info:-moz-placeholder { /* Firefox 18- */
+    color: #000;
+}
+
+.room_info::-moz-placeholder {  /* Firefox 19+ */
+    color: #000;
+}
+
+.room_info:-ms-input-placeholder {
+    color: #000;
+}
+.room_info {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+#typing {
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+}
+#msg-status {
+    text-align: right;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+}
+.msg-delivered {
+    box-shadow: 0 0 4px #000000;
+    border-radius: 5px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 5px;
+    top: 5px;
+    background-color: red;
+}
